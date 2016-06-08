@@ -1,6 +1,7 @@
 var main = function() {
         initialRequest();
 
+
 };
 
 var initialRequest = function() {
@@ -52,7 +53,7 @@ var createContent = function(countries) {
 
         makeDropDown( object );
     }
-    createCountryInfo( countries[0]);
+    // createCountryInfo( countries[0]);
 };
 
 var makeDropDown = function( object ) {
@@ -81,9 +82,16 @@ var menuChange = function(event) {
 
     thisObject = JSON.parse(object);
 
-    // console.log(thisObject);
+    console.log(thisObject.latlng);
 
-    newCountryInfo(thisObject);
+    var center = {lat: thisObject.latlng[0], lng: thisObject.latlng[1]};
+    var map = new Map(center, 5);
+
+    var info = "Country: " + thisObject.nativeName + "\nPopulation: " + thisObject.population + "\nCapital: " + thisObject.capital;
+
+    map.addMarker(center, info );
+
+    // newCountryInfo(thisObject);
 };
 
 var createCountryInfo = function( country ) {
