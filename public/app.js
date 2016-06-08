@@ -87,9 +87,10 @@ var menuChange = function(event) {
     var center = {lat: thisObject.latlng[0], lng: thisObject.latlng[1]};
     var map = new Map(center, 5);
 
-    var info = "Country: " + thisObject.nativeName + "\nPopulation: " + thisObject.population + "\nCapital: " + thisObject.capital;
+    var info = "Country: " + thisObject.nativeName + "Population: " + thisObject.population + "\nCapital: " + thisObject.capital;
 
     map.addMarker(center, info );
+    map.addInfoWindow(center, info );
 
     // newCountryInfo(thisObject);
 };

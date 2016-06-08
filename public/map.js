@@ -28,7 +28,7 @@ var Map = function(latLng, zoom) {
             draggable: true,
             animation: google.maps.Animation.DROP
         });
-        marker.addListener( 'mouseover', toggleBounce(marker));
+        // marker.addListener( 'mouseover', toggleBounce(marker));
         return marker;
     };
 
