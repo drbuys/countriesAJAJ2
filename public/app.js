@@ -106,49 +106,49 @@ var menuChange = function(event) {
     // newCountryInfo(thisObject);
 };
 
-var createCountryInfo = function( country ) {
-    var li1 = document.createElement( 'li' );
-    li1.setAttribute( 'id', 'li1' );
-    li1.innerText = "Country: " + country.nativeName;
-
-    var li2 = document.createElement( 'li' );
-    li2.setAttribute( 'id', 'li2' );
-    li2.innerText = "Population: " + country.population;
-
-    var li3 = document.createElement( 'li' );
-    li3.setAttribute( 'id', 'li3' );
-    li3.innerText = "Capital: " + country.capital;
-    // console.log( li );
-
-    var ul = document.getElementById('country-list');
-
-    ul.appendChild(li1);
-    ul.appendChild(li2);
-    ul.appendChild(li3);
-};
-
-var newCountryInfo = function( country ) {
-    var li1 = document.getElementById( 'li1' );
-    li1.innerText = "Country: " + country.nativeName;
-
-    var li2 = document.getElementById( 'li2' );
-    li2.innerText = "Population: " + country.population;
-
-    var li3 = document.getElementById( 'li3' );
-    li3.innerText = "Capital: " + country.capital;
-    // console.log( li );
-
-    var ul = document.getElementById('country-list');
-
-    ul.appendChild(li1);
-    ul.appendChild(li2);
-    ul.appendChild(li3);
-
-    var jcountry = JSON.stringify( country );
-    localStorage.setItem( 'thiscountry', jcountry );
-
-    console.log(jcountry);
-};
+// var createCountryInfo = function( country ) {
+//     var li1 = document.createElement( 'li' );
+//     li1.setAttribute( 'id', 'li1' );
+//     li1.innerText = "Country: " + country.nativeName;
+//
+//     var li2 = document.createElement( 'li' );
+//     li2.setAttribute( 'id', 'li2' );
+//     li2.innerText = "Population: " + country.population;
+//
+//     var li3 = document.createElement( 'li' );
+//     li3.setAttribute( 'id', 'li3' );
+//     li3.innerText = "Capital: " + country.capital;
+//     // console.log( li );
+//
+//     var ul = document.getElementById('country-list');
+//
+//     ul.appendChild(li1);
+//     ul.appendChild(li2);
+//     ul.appendChild(li3);
+// };
+//
+// var newCountryInfo = function( country ) {
+//     var li1 = document.getElementById( 'li1' );
+//     li1.innerText = "Country: " + country.nativeName;
+//
+//     var li2 = document.getElementById( 'li2' );
+//     li2.innerText = "Population: " + country.population;
+//
+//     var li3 = document.getElementById( 'li3' );
+//     li3.innerText = "Capital: " + country.capital;
+//     // console.log( li );
+//
+//     var ul = document.getElementById('country-list');
+//
+//     ul.appendChild(li1);
+//     ul.appendChild(li2);
+//     ul.appendChild(li3);
+//
+//     var jcountry = JSON.stringify( country );
+//     localStorage.setItem( 'thiscountry', jcountry );
+//
+//     console.log(jcountry);
+// };
 
 // <label for="size">Select your size:</label>
 // <select name="size">

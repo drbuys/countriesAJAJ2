@@ -39,7 +39,7 @@
 .element {
   width: 100%;
   height: 100%;
-  animation: pulse 5s infinite;
+  animation: pulse 2s infinite;
 }
 
 @keyframes pulse {
@@ -51,6 +51,18 @@
   }
   100% {
     background-color: #7ee51d;
+  }
+}
+
+@keyframes pulse2 {
+  0% {
+    background-color: #e31e50;
+  }
+  50% {
+    background-color: #7ee51d;
+  }
+  100% {
+    background-color: #e31e50;
   }
 }
 
@@ -77,6 +89,7 @@ h1 {
         font-family: fantasy;
         font-size: 2em;
         background: #1daee5;
+          animation: pulse2 2s infinite;
         /*opacity: 0.8;*/
 
 }
