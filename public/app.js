@@ -53,7 +53,16 @@ var createContent = function(countries) {
 
         makeDropDown( object );
     }
+
+    menuChange();
     // createCountryInfo( countries[0]);
+    // var center = {lat: thisObject.latlng[0], lng: thisObject.latlng[1]};
+    // var map = new Map(center, 5);
+    //
+    // var info = "Country: " + thisObject.nativeName + "<br>Population: " + thisObject.population + "<br>Capital: " + thisObject.capital;
+    //
+    // map.addMarker(center, info );
+    // map.addInfoWindow(center, info );
 };
 
 var makeDropDown = function( object ) {
@@ -92,6 +101,8 @@ var menuChange = function(event) {
     map.addMarker(center, info );
     map.addInfoWindow(center, info );
 
+    var jcountry = JSON.stringify( thisObject );
+    localStorage.setItem( 'thiscountry', jcountry );
     // newCountryInfo(thisObject);
 };
 
